@@ -11,7 +11,7 @@ const { studentProfileSchema } = require("./schema");
 
 const multer = require("multer");
 const { config } = require("../../config");
-const { uploadFile } = require("../../gg-cloud-storage");
+// const { uploadFile } = require("../../gg-cloud-storage");
 const upload = multer({ limits: { fieldSize: 10000000 } });
 
 router.get("/", async (req, res, next) => {
