@@ -36,6 +36,7 @@ jobs:
 
 
   pull-and-up:
+    if: false
     name: Pull new image and re run with the new version
     runs-on: ubuntu-latest
     needs: build-and-push
