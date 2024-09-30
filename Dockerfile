@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:20
 
 WORKDIR /app
 
@@ -6,10 +6,10 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY bundle.js ./
+COPY . .
 
 EXPOSE 8000
 
-ENTRYPOINT [ "node" ]
+ENTRYPOINT [ "npm" ]
 
-CMD [ "bundle.js" ]
+CMD [ "start" ]

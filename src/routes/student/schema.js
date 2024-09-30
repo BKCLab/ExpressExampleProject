@@ -1,10 +1,10 @@
-const Joi = require("joi");
+const z = require("zod");
 
-const studentProfileSchema = Joi.object({
-  studentId: Joi.string().length(8).required(),
-  name: Joi.string().required(),
-  dob: Joi.string().required(),
-  address: Joi.string().optional(),
+const studentSchema = z.object({
+  studentId: z.string().length(8),
+  name: z.string(),
+  dob: z.string(),
+  address: z.string(),
 });
 
-module.exports = {studentProfileSchema}
+module.exports = { studentSchema };
